@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link type="text/css" rel="stylesheet" href="style.css" />
+		<title>thoughtWork</title>
+	</head>
+	<body>
+		<!--弹出层-->
+		<div id="layer" onclick="disappear(event)">
+	    	<div class="account">
+	    		<h2>***没钱赚商店-购物清单***</h2>
+	    		<div id="accountTop"></div>
+	    		<div id="accountMiddle"></div>
+	    		<div id="accountBottom"></div>
+	    	</div>
+	    </div>
+	    <!--商品显示-->
+		<div class="container">
+			<h2>当购买的商品中，有符合“买二赠一”优惠条件的商品时(请点击按钮)：</h2>
+			<table>
+				<thead>
+					<th>商品名称</th>
+					<th>商品数量</th>
+					<th>单价</th>
+				</thead>
+				<tbody>
+					<tr>
+					  	<td>可乐</td>
+					  	<td>3瓶</td>
+					  	<td>3.00（元）</td>
+					</tr>
+					<tr>
+					  	<td>羽毛球</td>
+					  	<td>5个</td>
+					  	<td>1.00（元）</td>
+					</tr>
+					<tr>
+					  	<td>香肠</td>
+					  	<td>2根</td>
+					  	<td>4.00（元）</td>
+					</tr>
+				</tbody>
+			</table>
+			<button onclick="itemAccount(['ITEM000001-3','ITEM000003-5','ITEM000004-2'])">结算</button>
+		</div>
+		<div class="container">
+			<h2>当购买的商品中，没有符合“买二赠一”优惠条件的商品时：</h2>
+			<table>
+				<thead>
+					<th>商品名称</th>
+					<th>商品数量</th>
+					<th>单价</th>
+				</thead>
+				<tbody>
+					<tr>
+					  	<td>鸡蛋</td>
+					  	<td>5个</td>
+					  	<td>1.00（元）</td>
+					</tr>
+					<tr>
+					  	<td>牛肉</td>
+					  	<td>2斤</td>
+					  	<td>8.00（元）</td>
+					</tr>
+					<tr>
+					  	<td>香肠</td>
+					  	<td>2根</td>
+					  	<td>4.00（元）</td>
+					</tr>
+				</tbody>
+			</table>
+			<button onclick="itemAccount(['ITEM000005-5','ITEM000004-2','ITEM000006-2'])">结算</button>
+		</div>
+		<div class="container">
+			<h2>当购买的商品中，有符合“95折”优惠条件的商品时</h2>
+			<table>
+				<thead>
+					<th>商品名称</th>
+					<th>商品数量</th>
+					<th>单价</th>
+				</thead>
+				<tbody>
+					<tr>
+					  	<td>鸡蛋</td>
+					  	<td>5个</td>
+					  	<td>1.00（元）</td>
+					</tr>
+					<tr>
+					  	<td>苹果</td>
+					  	<td>2斤</td>
+					  	<td>5.50（元）</td>
+					</tr>
+					<tr>
+					  	<td>香肠</td>
+					  	<td>2根</td>
+					  	<td>4.00（元）</td>
+					</tr>
+				</tbody>
+			</table>
+			<button onclick="itemAccount(['ITEM000005-5','ITEM000002-2','ITEM000006-2'])">结算</button>
+		</div>
+		<div class="container">
+			<h2>当购买的商品中，有符合“95折”优惠条件的商品，又有符合“买二赠一”优惠条件的商品时</h2>
+			<table>
+				<thead>
+					<th>商品名称</th>
+					<th>商品数量</th>
+					<th>单价</th>
+				</thead>
+				<tbody>
+					<tr>
+					  	<td>苹果</td>
+					  	<td>2斤</td>
+					  	<td>5.50（元）</td>
+					</tr>
+					<tr>
+					  	<td>可乐</td>
+					  	<td>3个</td>
+					  	<td>3.00（元）</td>
+					</tr>
+					<tr>
+					  	<td>羽毛球</td>
+					  	<td>6个</td>
+					  	<td>1.00（元）</td>
+					</tr>
+				</tbody>
+			</table>
+			<button onclick="itemAccount(['ITEM000002-2','ITEM000001-3','ITEM000003-6'])">结算</button>
+		</div>
+		<script src="index.js"></script>
+	</body>
+</html>
